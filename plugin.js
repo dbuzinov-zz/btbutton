@@ -30,14 +30,20 @@
                         this.data.btntype = "btn-default";
                       } else if ($el.hasClass("btn-primary")) {
                         this.data.btntype = "btn-primary";
-                      } else if ($el.hasClass("btn-info")) {
-                        this.data.btntype = "btn-info";
-                      } else if ($el.hasClass("btn-success")) {
-                        this.data.btntype = "btn-success";
-                      } else if ($el.hasClass("btn-warning")) {
-                        this.data.btntype = "btn-warning";
-                      } else if ($el.hasClass("btn-danger")) {
-                        this.data.btntype = "btn-danger";
+                      } else if ($el.hasClass('btn-secondary')) {
+                        this.data.btntype = 'btn-secondary';
+                      } else if ($el.hasClass('btn-outline-secondary')) {
+                        this.data.btntype = 'btn-outline-secondary';
+                      } else if ($el.hasClass('btn-outline-primary')) {
+                        this.data.btntype = 'btn-outline-primary';
+                      } else if ($el.hasClass('btn-info')) {
+                        this.data.btntype = 'btn-info';
+                      } else if ($el.hasClass('btn-success')) {
+                        this.data.btntype = 'btn-success';
+                      } else if ($el.hasClass('btn-warning')) {
+                        this.data.btntype = 'btn-warning';
+                      } else if ($el.hasClass('btn-danger')) {
+                        this.data.btntype = 'btn-danger';
                       }
 
                       if ($el.hasClass("btn-xs")) {
@@ -90,7 +96,11 @@
                         var $el = jQuery(this.element.$);
 
                         if (this.data.btntype) {
-                            $el.removeClass('btn-link btn-default btn-primary btn-info btn-success btn-warning btn-danger').addClass(this.data.btntype);
+                            $el
+                              .removeClass(
+                                'btn-link btn-default btn-secondary btn-outline-primary btn-outline-secondary btn-primary btn-info btn-success btn-warning btn-danger'
+                              )
+                              .addClass(this.data.btntype);
                         }
 
                         $el.removeClass('btn-xs btn-sm btn-lg');
