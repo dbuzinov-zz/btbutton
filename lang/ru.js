@@ -16,6 +16,8 @@ CKEDITOR.plugins.setLang('btbutton', 'ru', {
   buttonSecondary: 'Secondary',
   buttonOutlinePrimary: 'Outline Primary',
   buttonOutlineSecondary: 'Outline Secondary',
+  buttonDark: 'Dark',
+  buttonLight: 'Light',
   buttonInfo: 'Инфо (info)',
   buttonSuccess: 'Зеленая (success)',
   buttonWarning: 'Оранжевая (warning)',
