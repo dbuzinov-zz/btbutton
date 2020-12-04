@@ -13,49 +13,90 @@ CKEDITOR.dialog.add('btbutton', function (editor) {
           accessKey: 'I',
           elements: [
             {
-              type: 'hbox',
-              widths: ['50%', '50%'],
-              children: [
-                {
-                  id: 'btntype',
-                  type: 'select',
-                  label: lang.buttonStyleLabel,
-                  items: [
-                    [lang.buttonLink, 'btn-link'],
-                    [lang.buttonPrimary, 'btn-primary'],
-                    [lang.buttonSecondary, 'btn-secondary'],
-                    [lang.buttonOutlinePrimary, 'btn-outline-primary'],
-                    [lang.buttonOutlineSecondary, 'btn-outline-secondary'],
-                    [lang.buttonSuccess, 'btn-success'],
-                    [lang.buttonInfo, 'btn-info'],
-                    [lang.buttonWarning, 'btn-warning'],
-                    [lang.buttonDanger, 'btn-danger'],
-                  ],
-                  setup: function (widget) {
-                    this.setValue(widget.data.btntype || 'btn-default');
-                  },
-                  commit: function (widget) {
-                    widget.setData('btntype', this.getValue());
-                  },
-                },
-                {
-                  id: 'btnsize',
-                  type: 'select',
-                  label: lang.buttonSizeLabel,
-                  items: [
-                    // [lang.buttonSizeExSmall, 'btn-xs'],
-                    [lang.buttonSizeSmall, 'btn-sm'],
-                    [lang.buttonSizeNormal, ''],
-                    [lang.buttonSizeLarge, 'btn-lg'],
-                  ],
-                  setup: function (widget) {
-                    this.setValue(widget.data.btnsize || '');
-                  },
-                  commit: function (widget) {
-                    widget.setData('btnsize', this.getValue());
-                  },
-                },
-              ],
+                id: 'info',
+                label: lang.tabInfo,
+                accessKey: 'I',
+                elements: [
+                    {
+                        type: "hbox",
+                        widths: ["50%", "50%"],
+                        children: [
+                            {
+                                id: 'btntype',
+                                type: 'select',
+                                label: lang.buttonStyleLabel,
+                                items: [
+                                    [lang.buttonLink, 'btn-link'],
+                                    [lang.buttonPrimary, 'btn-primary'],
+                                    [lang.buttonSecondary, 'btn-secondary'],
+                                    [lang.buttonOutlinePrimary, 'btn-outline-primary'],
+                                    [lang.buttonOutlineSecondary, 'btn-outline-secondary'],
+                                    [lang.buttonSuccess, 'btn-success'],
+                                    [lang.buttonInfo, 'btn-info'],
+                                    [lang.buttonWarning, 'btn-warning'],
+                                    [lang.buttonDanger, 'btn-danger'],
+                                    [lang.buttonDark, 'btn-dark'],
+                                    [lang.buttonLight, 'btn-light'],
+
+                                ],
+                                setup: function (widget) {
+                                    this.setValue(widget.data.btntype || 'btn-default');
+                                },
+                                commit: function (widget) {
+                                    widget.setData('btntype', this.getValue());
+                                }
+                            },
+                            {
+                                id: 'btnsize',
+                                type: 'select',
+                                label: lang.buttonSizeLabel,
+                                items: [
+                                    [lang.buttonSizeSmall, 'btn-sm'],
+                                    [lang.buttonSizeNormal, ''],
+                                    [lang.buttonSizeLarge, 'btn-lg']
+                                ],
+                                setup: function (widget) {
+                                    this.setValue(widget.data.btnsize || '');
+                                },
+                                commit: function (widget) {
+                                    widget.setData('btnsize', this.getValue());
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        type: "hbox",
+                        widths: ["50%", "50%"],
+                        children: [
+                            {
+                                id: 'text',
+                                type: 'text',
+                                width: '200px',
+                                required: true,
+                                label: lang.buttonTextLabel,
+                                setup: function (widget) {
+                                    this.setValue(widget.data.text || 'A Button');
+                                },
+                                commit: function (widget) {
+                                    widget.setData('text', this.getValue());
+                                }
+                            },
+                            {
+                                id: 'href',
+                                type: 'text',
+                                width: '200px',
+                                required: true,
+                                label: lang.buttonUrlLabel,
+                                setup: function (widget) {
+                                    this.setValue(widget.data.href || '#');
+                                },
+                                commit: function (widget) {
+                                    widget.setData('href', this.getValue());
+                                }
+                            }
+                        ]
+                    }
+                ]
             },
             {
               type: 'hbox',

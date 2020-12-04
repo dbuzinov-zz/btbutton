@@ -26,8 +26,6 @@
 
                       if ($el.hasClass("btn-link")) {
                         this.data.btntype = "btn-link";
-                      } else if ($el.hasClass("btn-default")) {
-                        this.data.btntype = "btn-default";
                       } else if ($el.hasClass("btn-primary")) {
                         this.data.btntype = "btn-primary";
                       } else if ($el.hasClass('btn-secondary')) {
@@ -36,19 +34,21 @@
                         this.data.btntype = 'btn-outline-secondary';
                       } else if ($el.hasClass('btn-outline-primary')) {
                         this.data.btntype = 'btn-outline-primary';
-                      } else if ($el.hasClass('btn-info')) {
-                        this.data.btntype = 'btn-info';
-                      } else if ($el.hasClass('btn-success')) {
-                        this.data.btntype = 'btn-success';
-                      } else if ($el.hasClass('btn-warning')) {
-                        this.data.btntype = 'btn-warning';
-                      } else if ($el.hasClass('btn-danger')) {
-                        this.data.btntype = 'btn-danger';
+                      } else if ($el.hasClass("btn-info")) {
+                        this.data.btntype = "btn-info";
+                      } else if ($el.hasClass("btn-success")) {
+                        this.data.btntype = "btn-success";
+                      } else if ($el.hasClass("btn-warning")) {
+                        this.data.btntype = "btn-warning";
+                      } else if ($el.hasClass("btn-danger")) {
+                        this.data.btntype = "btn-danger";
+                      } else if ($el.hasClass("btn-dark")) {
+                        this.data.btntype = "btn-dark";
+                      } else if ($el.hasClass("btn-light")) {
+                        this.data.btntype = "btn-light";
                       }
 
-                      if ($el.hasClass("btn-xs")) {
-                        this.data.btnsize = "btn-xs";
-                      } else if ($el.hasClass("btn-sm")) {
+                      if ($el.hasClass("btn-sm")) {
                         this.data.btnsize = "btn-sm";
                       } else if ($el.hasClass("btn-lg")) {
                         this.data.btnsize = "btn-lg";
